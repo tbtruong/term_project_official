@@ -1,10 +1,10 @@
-import * as React from 'react';
-import ResponsiveAppBar from './Components/AppBar'
-import SearchComponent from './Components/SearchComponent'
-import CardComponent from './Components/CardComponent'
-import CartComponent from './Components/CartComponent'
 import { Box } from '@mui/material';
-import initialList from './mockJson.json'
+import * as React from 'react';
+import ResponsiveAppBar from './Components/AppBar';
+import CardComponent from './Components/CardComponent';
+import CartComponent from './Components/CartComponent';
+import SearchComponent from './Components/SearchComponent';
+import initialList from './mockJson.json';
 
 
 export interface skillCardsInterface {
@@ -38,10 +38,6 @@ const searchItemStyling = {
   marginTop: "1rem",
   gap: "2rem",
   rowGap: "2rem"
-}
-
-const SkillItemStyling = {
-  flexGrow: 1
 }
 
 export const Resume: React.FC = () =>{
