@@ -1,0 +1,26 @@
+[
+        { 
+            "name": "React",
+            "image": "../Static/React.png"
+        }, 
+        { 
+            "name": "HTML",
+            "image": "../Static/React.png"
+        }, 
+        { 
+            "name": "Vue",
+            "image": "../Static/React.png"
+        }, 
+        { 
+            "name": "CSS",
+            "image": "../Static/React.png"
+        }, 
+        { 
+            "name": "MUI",
+            "image": "../Static/React.png"
+        },
+        { 
+            "name": "Javascript",
+            "image": "../Static/React.png"
+        }
+]
