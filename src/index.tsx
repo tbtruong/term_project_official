@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import Skills from './Skills'
-import reportWebVitals from './reportWebVitals';
 import {
-  BrowserRouter,
-  Routes,
-  Route,
+  BrowserRouter, Route, Routes
 } from "react-router-dom";
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import Skills from './Skills';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

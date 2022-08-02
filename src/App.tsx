@@ -1,8 +1,8 @@
+import { Box, Typography } from '@mui/material';
 import * as React from 'react';
 import AppBar from './Components/AppBar';
-import { Box, Typography } from '@mui/material';
-import './index.css'
 import SchoolCard from './Components/SchoolCard';
+import './index.css';
 
 export const App: React.FC = () =>{
 
