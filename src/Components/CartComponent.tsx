@@ -18,8 +18,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { skillCardsInterface } from '../Skills';
-
-//skill cart component is a component that takes in a list of items, displays these items in vertical format with a trash icon next to it.  At the end of the list there should be a calculate button 
+import axios from 'axios'
 
 export interface cartComponentProps {
   skillList: skillCardsInterface[],
@@ -49,6 +48,7 @@ const CartComponent = ({skillList, searchItemCallback}: cartComponentProps) => {
 
   const [open, setOpen] = React.useState(false);
   const [emailValue, setEmailValue] = React.useState('')
+  const [messageValue, setMessageValue] = React.useState('')
   const [isDisabled, setIsDisabled] = React.useState(true)
 
   const handleClickOpen = () => {
@@ -62,6 +62,19 @@ const CartComponent = ({skillList, searchItemCallback}: cartComponentProps) => {
   const getCurrentImage = (name: string) => {
     let images = require.context('../Static/', false, /\.png$/)
     return images("./" + name + ".png")
+  }
+
+  const submitForm = () => {
+    axios.post("https://ptsv2.com/t/TungCS", {
+          "email": emailValue, 
+          "message": messageValue, 
+          "expertiseNeeded": skillList
+      }).then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
   }
 
 
@@ -130,12 +143,14 @@ const CartComponent = ({skillList, searchItemCallback}: cartComponentProps) => {
             fullWidth
             variant="filled"
             color="secondary"
+            value={messageValue}
+            onChange= {(event) => setMessageValue(event.target.value)}
             sx={textBoxStyle}
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose} disabled={isDisabled}>Contact</Button>
+          <Button onClick={submitForm} disabled={isDisabled}>Contact</Button>
         </DialogActions>
       </Dialog>
     </Box>) 
