@@ -65,7 +65,7 @@ const CartComponent = ({skillList, searchItemCallback}: cartComponentProps) => {
   }
 
   const submitForm = () => {
-    axios.post("http://ptsv2.com/t/TungCS/post", {
+    axios.post("https://ptsv2.com/t/TungCS/post", {
           "email": emailValue, 
           "message": messageValue, 
           "expertiseNeeded": skillList

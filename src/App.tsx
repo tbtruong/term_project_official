@@ -3,6 +3,7 @@ import * as React from 'react';
 import AppBar from './Components/AppBar';
 import SchoolCard from './Components/SchoolCard';
 import './index.css';
+import ProjectCard from './Components/ProjectCards'
 
 export const App: React.FC = () =>{
 
@@ -34,6 +35,17 @@ export const App: React.FC = () =>{
     justifyContent: 'space-evenly'
   }
 
+  const projectStyle = {
+    display: "flex",
+    flexDirection: "horizontal",
+    flexWrap: "wrap",
+    marginTop: "1rem",
+    gap: "5rem",
+    rowGap: "2rem",
+    justifyContent: 'space-evenly',
+    textDecoration: 'none!important'
+  }
+
     return (
       <Box sx={topLevelStyling}>
         <AppBar/>
@@ -54,6 +66,21 @@ export const App: React.FC = () =>{
             <SchoolCard title='Bachelor of Arts in Computer Science' description='Graduated 2020' details={["GPA: 3.5", "Minors: Chemistry, Biology", "Coursework: Software Engineering, Full Stack Development,  Mobile App Development, Intro to Artificial Intelligence"]}/>
             <SchoolCard title='Masters of Science in Software Development' description='Expected Graduation 2023' details={["GPA: N/A", "Minors: N/A", "Coursework: Software Engineering, Frontend Development"]}/>
           </Box>
+        <Typography variant={'h3'} sx={headerStyling}> Projects </Typography>
+        <Box sx={projectStyle}>
+          <ProjectCard name={'Quarantine Exercise'} points={["• Employed Java and Android Studios to create a mobile application that enables users to exercise with various difficulty levels.",
+          "• Expanded app versatility by incorporating simulated training weights that allows user to increase force needed to count as a rep.",
+          "• Increased user enjoyment by integrating a reward system that plays music and strobe lights after user hits a certain rep count."]} 
+          link={''} />
+          <ProjectCard name={'Travelers'} points={["• Created an Angular and NodeJS web application that matches user to a travel destination based on their music preferences.",
+            "• Implemented weather forecast feature to provide the user key information to plan their travels enhancing user experience.",
+            "• Designated scrum master and coordinated with teammates to set up an agile/scrum environment boosting productivity."]} link={''}/>
+          <ProjectCard name={'Optimized Space Invaders'} points={["• Created an Angular and NodeJS web application that matches user to a travel destination based on their music preferences.",
+            "• Implemented weather forecast feature to provide the user key information to plan their travels enhancing user experience.",
+            "• Designated scrum master and coordinated with teammates to set up an agile/scrum environment boosting productivity."]} link={''}/>
+          <ProjectCard name={'Discrete Event Simulator'} points={["• Devised system scheduling simulator using Java to mimic a wide range of real life scenarios through use of numerous scheduling methods accounting for varying service times, arrival rates, number of processors, and data handling procedures.",
+            "• Analyzed system performance metrics and run times of various data structures employing the most suitable that imitates caches crucial for meeting task deadlines, successfully avoids scheduling deadlocks, and schedules in the most efficient time."]} link={'a'}/>
+        </Box>
       </Box>
     );
 
