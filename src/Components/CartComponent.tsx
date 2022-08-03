@@ -69,7 +69,11 @@ const CartComponent = ({skillList, searchItemCallback}: cartComponentProps) => {
           "email": emailValue, 
           "message": messageValue, 
           "expertiseNeeded": skillList
-      }).then(function (response) {
+      },  {
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded' 
+        } 
+      } ).then(function (response) {
           console.log(response);
         })
         .catch(function (error) {
