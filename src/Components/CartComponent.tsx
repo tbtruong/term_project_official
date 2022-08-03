@@ -79,6 +79,7 @@ const CartComponent = ({skillList, searchItemCallback}: cartComponentProps) => {
         .catch(function (error) {
           console.log(error);
         });
+    setOpen(false);
   }
 
 

@@ -24,7 +24,7 @@ const ProjectCard = ({name, points}: projectCardProps) => {
   return (
     <Card raised sx={{ maxWidth: 345, textDecoration: 'none' }}>
       <CardActionArea sx={actionStyle}>
-      <Link href="https://github.com/tbtruong/term_project_official" underline="none" target="_blank" color="inherit">
+      <Link href="https://github.com/tbtruong/term_project_official" underline="hover" target="_blank" color="inherit">
         <CardContent sx={actionStyle}>
           <Typography gutterBottom variant="h5" component="div" sx={titleStyle}>
             {name}
