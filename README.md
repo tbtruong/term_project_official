@@ -1,4 +1,6 @@
-SX, Controlled vs Uncontrolled, State. 
+This project was made using React and Material UI. The theme for this project was to introduce myself and make my resume come to life. 
+
+Note: Used documentation from Material UI and adapted stack overflow code to resolve project problems.  
 
 # Getting Started with Create React App
 
